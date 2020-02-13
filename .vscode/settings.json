@@ -1,0 +1,7 @@
+{
+    "grunt.autoDetect": "off",
+    "gulp.autoDetect": "off",
+    "scm.alwaysShowProviders": true,
+    "scm.alwaysShowActions": true,
+    "extensions.closeExtensionDetailsOnViewChange": true
+}
