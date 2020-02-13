@@ -30,16 +30,16 @@ public static function login($usuario)
     self::getConexion();
 
     $resultado=self::$cnx->prepare($query);
-    $resultado->bindParam(":usuario",$usuario->getUsuario());
-    $resultado->bindParam(":password",$usuario->getPassword());
+    $resultado->bindValue(":usuario",$usuario->getUsuario());
+    $resultado->bindValue(":password",$usuario->getPassword());
 
     $resultado->execute();
 
-    if(count($resultado)){
-        return "true";
+    if($resultado->rowCount()>0){
+        return true;
     }
 
-    return "false";
+    return false;
 }
 
 }
